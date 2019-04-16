@@ -25,9 +25,7 @@ class Contact extends Component {
                   onClick={() =>
                     this.setState({ showDetails: !this.state.showDetails })
                   }
-                  className={
-                    this.state.showDetails ? 'fas fa-minus' : 'fas fa-plus'
-                  }
+                  className={'fas fa-sort-down'}
                   style={{ cursor: 'pointer' }}
                 />
                 <i

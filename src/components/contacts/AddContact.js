@@ -32,6 +32,16 @@ class AddContact extends Component {
 
     const newContact = { id: uuid(), name, email, phone }
     dispatch({ type: 'ADD_CONTACT', payload: newContact })
+
+    // Clear State
+    this.setState({
+      name: '',
+      email: '',
+      phone: '',
+      errors: {}
+    });
+
+    this.props.history.push('/');
   }
 
   onChange = e => this.setState({ [e.target.name]: e.target.value })
